@@ -1,0 +1,6 @@
+select-- date_trunc('day', evt_block_time), 
+count(*) as blocks, 
+count(*) * 546 as transactions
+from zksync_ethereum.ExecutorFacet_call_proveBlocks
+where contract_address=0x32400084c286cf3e17e7b677ea9583e60a000324
+--group by 1 
